@@ -1,0 +1,56 @@
+:root{
+    --salmon: #EF9D71;
+    --dsalmon:#532521;
+    --dark: #000;
+    --light: #fff;
+    --cyan: #AEDEE0;
+    --dcyan: #1f2f32; 
+}
+
+*{
+    ::selection{
+        background-color:var(--salmon); 
+        color: #fff;
+    }
+}
+
+body{
+    transition: background-color ease-out .5s;
+}
+
+@font-face {
+    font-family: Pp Neue Machina;
+    src: url(./659dbdfd5a080be8d348316e_PP\ Neue\ Machina\ Inktrap\ Medium.ttf);
+}
+
+body[theme="dark"] {
+    background-color: var(--dark);
+}
+body[theme="dark"] .section{
+    color: var(--light);
+}
+
+body[theme="light"]{
+    background-color: var(--light);
+}
+body[theme="light"] .section{
+    color: var(--dark);
+}
+
+body[theme="salmon"]{
+    background-color: var(--salmon);
+}
+body[theme="salmon"].section{
+    color: var(--dsalmon);
+}
+
+body[theme="cyan"]{
+    background-color: var(--cyan);
+}
+body[theme="cyan"].section {
+    color: var(--dcyan);
+}
+
+.vdodiv{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
